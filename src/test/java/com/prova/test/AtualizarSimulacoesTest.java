@@ -48,8 +48,6 @@ public class AtualizarSimulacoesTest {
                 .when()
                 .put("/v1/simulacoes/"+alterarSimulacao.getCpf())
                 .then()
-                .log()
-                .all()
                 .statusCode(200)
                 .body("nome",Matchers.equalTo("NomeAlterado"))
                 .body("email",Matchers.equalTo("emailALT@email.com"))
